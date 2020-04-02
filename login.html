@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<style>
+#back_img {
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url("background6.jfif");
+  background-repeat: no-repeat;
+  //width: 100%;
+  //height: 100%;
+  background-size: cover;
+  //background-size: 50% 50%;
+  //background-color: red;
+}
+
+form {
+  border: 7px solid rgb(40,40,40);
+  border-radius: 10px;
+}
+.header {
+  padding: 5px;
+  height: 100px;
+  width: 100%;
+  position: fixed;
+  text-align: center;
+//  background: #1abc9c;
+  color: black;
+  font-size: 20px;
+}
+.heading{
+  margin-left: 120px;
+  padding: 10px 0;
+}
+#grad{
+  //background-color: #cc5200;
+  width: 600px;
+  height: auto;
+  margin-top: 120px;
+  margin-bottom: 70px;
+}
+input[type=email], input[type=password], input[type=text] {
+  width: 520px;
+  padding: 12px 20px;
+  margin-left: 18px;
+  display: inline-block;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+input[type=email]:focus, input[type=password]:focus, input[type=text]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+#caps {
+  display: none;
+  color: red;
+  margin-left: 21px;
+  margin-top: 5px;
+  margin-bottom: 0;
+  text-align: center;
+  text-decoration: underline;
+}
+
+button.a {
+  background-color: grey;
+  color: white;
+  padding: 14px 20px;
+  margin-top: 5px;
+  margin-left: 110px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  width: 150px;
+}
+
+button.b{
+  background-color: grey;
+  color: white;
+  padding: 14px 20px;
+  margin-top: 5px;
+  margin-left: 30px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  width: 150px;
+}
+button.a:hover {
+  background-color: black;
+  //opacity: 0.8;
+}
+
+button.b:hover {
+  background-color: black;
+  //opacity: 0.5;
+}
+
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+img.avatar {
+  width: 10%;
+  height: auto;
+  border-radius: 50%;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 50px;
+  width: 100%;
+  //background-color: green;
+  color: white;
+  text-align: center;
+}
+
+.input-container {
+  display: -ms-flexbox; /* IE10 */
+  display: inline-block;
+  width: 50%;
+  margin-left: 17px;
+  margin-bottom: 5px;
+}
+
+.icon {
+  padding: 10px;
+  background: skyblue;
+  color: white;
+  min-width: 50px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.e1, .p1{
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+/* Set a style for all buttons */
+  button.signupbtn {
+  background-color: #00a950;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 19px;
+  border: none;
+  cursor: pointer;
+  width: 21%;
+  opacity: 0.9;
+  border-radius: 25px;
+}
+button.cancelbtn {
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 16px;
+  border: none;
+  cursor: pointer;
+  width: 21%;
+  opacity: 0.9;
+  border-radius: 25px;
+}
+
+button:hover {
+  opacity:1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 20%;
+}
+
+/* Add padding to container elements */
+.container {
+  padding: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: #474e5d;
+  padding-top: 50px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 100%; /* Could be more or less, depending on screen size */
+  border-radius: 50px;
+}
+
+/* Style the horizontal ruler */
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 35px;
+  top: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #f1f1f1;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  flex: 30%;
+  background-color: transparent;
+  padding: 20px;
+  border-radius: 50px;
+}
+
+/* Main column */
+.main {
+  flex: 50%;
+  background-color: transparent;
+  padding: 20px;
+  border-radius: 50px;
+}
+
+/* The message box is shown when the user clicks on the password field */
+#message {
+  display:none;
+  color: #000;
+  position: relative;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+#message p {
+  padding: 10px 35px;
+  font-size: 18px;
+}
+
+/* Add a green text color and a checkmark when the requirements are right */
+.valid {
+  color: green;
+}
+
+.valid:before {
+  position: relative;
+  left: -35px;
+  content: "✔";
+}
+
+/* Add a red text color and an "x" when the requirements are wrong */
+.invalid {
+  color: red;
+}
+
+.invalid:before {
+  position: relative;
+  left: -35px;
+  content: "✖";
+}
+
+</style>
+</head>
+<body>
+  <div id="back_img">
+  <div class="header">
+    <img src="lg.jpeg" height="70px" width="70px">
+    <p style="font-size:60px; font-family: 'freestyle script'">Report Repository</p>
+</div>
+
+  <div class="container" id="grad1">
+<div class="container" id="grad">
+<div class="heading">
+<h3><span style="font-family:'comic sans ms';margin-left:30px;">Sign Into Your Account</span></h3>
+</div>
+
+<form action="login.php" method="post">
+  <div class="imgcontainer">
+    <img src="avatar.png" alt="Avatar" class="avatar">
+  </div>
+
+  <div class="form-group">
+    <label for="uname"><b><span style="margin-left: 18px; font-size: 17px;color: white;">Email:</span></b></label><br>
+    <input type="email" placeholder="Enter Email" name="uname" required>
+    <br>
+  </div>
+
+  <div class="form-group">
+    <label for="psw"><b><span style="margin-left: 18px; font-size: 17px;color: white;">Password:</span></b></label><br>
+    <input type="password" placeholder="Enter Password" name="psw" id="pwd" required>
+    <p id="caps">WARNING! Caps lock is ON.</p>
+    <br>
+  </div>
+  <span style="margin-left: 21px; font-size: 14px;"><input type="checkbox" onclick="showpwd()">Show Password</span><br>
+    <button type="submit" class="a"><span style="font-size: 16px;">Login</span></button>
+    <button class="b" onclick="document.getElementById('id01').style.display='block'"><span style="font-size: 16px;">Sign Up</span></button>
+</form>
+</div>
+</div>
+
+
+
+
+
+<div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+  <form class="modal-content" action="signup.php" method="post">
+    <div class="container">
+      <div class="row">
+        <div class="main">
+      <h1><span style="margin-left: 200px;">Sign Up</span></h1>
+      <p><span style="margin-left: 17px;">Please fill in this form to create an account.</span></p>
+
+      <div class="input-container">
+    <i class="fa fa-user icon"></i>
+      <label for="email"><span><b>Email</b></span></label>
+    </div><br>
+      <input class="e1" type="email" placeholder="Enter Email" name="email" required><br>
+
+    <div class="input-container">
+    <i class="fa fa-key icon"></i>
+      <label for="psw"><span><b>Password</b></span></label>
+    </div><br>
+      <input class="p1" type="password" placeholder="Enter Password" name="psw"  id="pp" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+      title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required><br>
+
+    <div class="input-container">
+    <i class="fa fa-key icon"></i>
+      <label for="psw-repeat"><span><b>Repeat Password</b></span></label>
+    </div><br>
+      <input class="p1" type="password" placeholder="Repeat Password" name="psw-repeat" required><br>
+
+      <label>
+        <span style="margin-left: 17px;"><input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me</span>
+      </label>
+
+      <p><span style="margin-left: 17px;">By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</span></p>
+
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <a href="‪G:\xmp\htdocs\details.html">  <button type="submit" class="signupbtn">Sign Up</button></a>
+      </div>
+    </div>
+  <div class="side">
+    <div id="message">
+      <h3>Password must contain the following:</h3>
+      <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+      <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+      <p id="number" class="invalid">A <b>number</b></p>
+      <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+    </div>
+  </div>
+</div>
+</div>
+  </form>
+</div>
+
+<script>
+
+
+var myInput = document.getElementById("pp");
+var letter = document.getElementById("letter");
+var capital = document.getElementById("capital");
+var number = document.getElementById("number");
+var length = document.getElementById("length");
+
+// When the user clicks on the password field, show the message box
+myInput.onfocus = function() {
+  document.getElementById("message").style.display = "block";
+}
+
+// When the user clicks outside of the password field, hide the message box
+myInput.onblur = function() {
+  document.getElementById("message").style.display = "none";
+}
+
+// When the user starts to type something inside the password field
+myInput.onkeyup = function() {
+  // Validate lowercase letters
+  var lowerCaseLetters = /[a-z]/g;
+  if(myInput.value.match(lowerCaseLetters)) {
+    letter.classList.remove("invalid");
+    letter.classList.add("valid");
+  } else {
+    letter.classList.remove("valid");
+    letter.classList.add("invalid");
+  }
+
+  // Validate capital letters
+  var upperCaseLetters = /[A-Z]/g;
+  if(myInput.value.match(upperCaseLetters)) {
+    capital.classList.remove("invalid");
+    capital.classList.add("valid");
+  } else {
+    capital.classList.remove("valid");
+    capital.classList.add("invalid");
+  }
+
+  // Validate numbers
+  var numbers = /[0-9]/g;
+  if(myInput.value.match(numbers)) {
+    number.classList.remove("invalid");
+    number.classList.add("valid");
+  } else {
+    number.classList.remove("valid");
+    number.classList.add("invalid");
+  }
+
+  // Validate length
+  if(myInput.value.length >= 8) {
+    length.classList.remove("invalid");
+    length.classList.add("valid");
+  } else {
+    length.classList.remove("valid");
+    length.classList.add("invalid");
+  }
+}
+
+
+var input = document.getElementById("pwd");
+var text = document.getElementById("caps");
+input.addEventListener("keyup", function(event) {
+
+if (event.getModifierState("CapsLock")) {
+    text.style.display = "block";
+  } else {
+    text.style.display = "none"
+  }
+});
+
+
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+
+
+function showpwd()
+{
+  var x=document.getElementById("pwd");
+  if(x.type==="password")
+  {
+    x.type="text";
+  }
+  else {
+    {
+      x.type="password";
+    }
+  }
+}
+</script>
+</body>
+</html>
