@@ -46,18 +46,7 @@ else
   }
 
 
-    /* Create two unequal columns that floats next to each other */
-    /*.column {
-      float: left;
-      padding: 10px;
-      height: 555px;*/ /* Should be removed. Only for demonstration */
-    //}
-
-    /*.left {
-      width: 10%;
-      background-color: #3d5c5c;
-    }*/
-
+   
     .column {
       float: left;
       padding: 10px;
@@ -182,17 +171,6 @@ else
       height: 250px;
     }
 
-    /*.fa{
-      width: 36px;
-      height: 36px;
-      //display: inline-block;
-      border-radius: 50%;
-      color: white;
-      padding: 11px 16px;
-      background-color: #00a950;
-      display: inline-block;
-      text-rendering: auto;
-    }*/
 
     #class3{
       margin-bottom: 10px;
@@ -268,7 +246,7 @@ else
     <div class="header">
       <p style="font-size:60px; font-family: 'freestyle script'">Report
       <img src="lg.jpeg" height="70px" width="70px" style="margin-bottom: 20px;">&nbsp;Repository</p>
-    <!--       <p style="font-size:60px; font-family: 'freestyle script'">Report Repository</p>-->
+          <p style="font-size:60px; font-family: 'freestyle script'">Report Repository</p>
     </div>
    </div>
 <div class="row">
@@ -539,12 +517,6 @@ function bmi(){
       document.getElementById("form1").style.display="block";
     }
 }
-
-/*function run()
-{
-  var URL = "G:/xmp/htdocs/profile.html";
-  window.open(URL,null);
-}*/
 
 </script>
 
