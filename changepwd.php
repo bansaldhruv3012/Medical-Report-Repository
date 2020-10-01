@@ -609,7 +609,7 @@ if(!empty($_POST)){
               else{
                 echo "nello";
                 echo "<script type='javascript'>";
-                echo "alert('Password not changed)";
+                echo "alert('There is an error in changing the Password')";
                 echo "window.location='changepwd.php'";
               }
 
