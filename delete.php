@@ -4,7 +4,6 @@ session_start();
 
 if($_SESSION["email"]==true)
 {
-
 }
 else
 {
@@ -22,8 +21,10 @@ else
   }
 
   $key=$_SESSION["email"];
-  //echo "hello";
-  if($_GET['op']=="delete")
+ 
+//echo "hello";
+
+if($_GET['op']=="delete")
   {
     $img_del=$_GET['rowimage'];
     $disease=$_GET['disease'];
