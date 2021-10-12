@@ -47,19 +47,6 @@ else
      }
 
 
-
-     /* Create two unequal columns that floats next to each other */
-     /*.column {
-       float: left;
-       padding: 10px;
-       height: 555px;*/ /* Should be removed. Only for demonstration */
-     //}
-
-     /*.left {
-       width: 10%;
-       background-color: #3d5c5c;
-     }*/
-
      .column {
        float: left;
        padding: 10px;
@@ -373,7 +360,7 @@ else
  <div class="column right" id="right">
    <div class="col-xs-12 col-sm-12 col-md-12">
      Please input your height and weight to<br> know your BMI.Body Mass Index(or BMI)<br>is calculated as
-     your weight(in kilograms)<br> divided by the square of your<br> height(in metres) or BMI = Kg/M2.
+     your weight(in Kilograms (Kg))<br> divided by the square of your<br> height(in metres) or BMI = Kg/M2.
    </div>
  </div>
  </div>
